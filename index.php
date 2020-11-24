@@ -1,30 +1,193 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Мебельная компания");
-?><p>
-Наша компания существует на Российском рынке с 1992 года. За это время «Мебельная компания» прошла большой путь от маленькой торговой фирмы до одного из крупнейших производителей корпусной мебели в России.
-</p><p>
-«Мебельная компания» осуществляет производство мебели на высококлассном оборудовании с применением минимальной доли ручного труда, что позволяет обеспечить высокое качество нашей продукции. Налажен производственный процесс как массового и индивидуального характера, что с одной стороны позволяет обеспечить постоянную номенклатуру изделий и индивидуальный подход – с другой.
-<h3>Наша продукция</h3>
-<?$APPLICATION->IncludeComponent("bitrix:furniture.catalog.index", "", array(
-	"IBLOCK_TYPE"    => "products",
-	"IBLOCK_ID"      => "#PRODUCTS_IBLOCK_ID#",
-	"IBLOCK_BINDING" => "section",
-	"CACHE_TYPE"     => "A",
-	"CACHE_TIME"     => "36000000",
-	"CACHE_GROUPS"   => "N"
-	),
-	false
-);?>
-<h3>Наши услуги</h3>
-<?$APPLICATION->IncludeComponent("bitrix:furniture.catalog.index", "", array(
-	"IBLOCK_TYPE"    => "products",
-	"IBLOCK_ID"      => "#SERVICES_IBLOCK_ID#",
-	"IBLOCK_BINDING" => "element",
-	"CACHE_TYPE"     => "A",
-	"CACHE_TIME"     => "36000000",
-	"CACHE_GROUPS"   => "N"
-	),
-	false
-);?>
-</p><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+$APPLICATION->SetTitle("Voguish a Blogging Category Flat Bootstarp Responsive Website Template | Home :: w3layouts");
+?>
+<main class="container">
+	<div class="col-md-9 bann-right">
+		<!-- banner -->
+		<div class="banner">		
+			<div class="header-slider">
+				<div class="slider">
+					<div class="callbacks_container">
+					  	<ul class="rslides" id="slider">
+							<li>
+								<img src="<?=SITE_TEMPLATE_PATH?>/images/1.jpg" class="img-responsive" alt="">
+								<div class="caption">
+									<h3>Maecenas malesuada elit lectus felis</h3>
+									<p>Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus.</p>
+								</div>
+							</li>
+							<li>
+								<img src="<?=SITE_TEMPLATE_PATH?>/images/4.jpg" class="img-responsive" alt="">
+								<div class="caption">
+									<h3>Curabitur et ligula. Ut molestie </h3>
+									<p>Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulu. </p>
+								</div>
+							</li>
+							<li>
+								<img src="<?=SITE_TEMPLATE_PATH?>/images/5.jpg" class="img-responsive" alt="">
+								<div class="caption">
+									<h3>Etiam ullamcorper. Suspendisse</h3>
+									<p>Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. </p>
+								</div>
+							</li>
+							<li>
+								<img src="<?=SITE_TEMPLATE_PATH?>/images/6.jpg" class="img-responsive" alt="">
+								<div class="caption">
+									<h3>Suspendisse a pellentesque dui</h3>
+									<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada .</p>
+								</div>
+							</li>	
+						</ul>
+			  		</div>
+				 </div>
+			</div>
+		</div>
+		<!-- banner -->	
+		<!-- nam-matis -->
+		<div class="nam-matis">
+			<div class="nam-matis-top">
+						<div class="col-md-6 nam-matis-1">
+							<a href="single.html"><img src="<?=SITE_TEMPLATE_PATH?>/images/5.jpg" class="img-responsive" alt=""></a>
+							<h3><a href="single.html">Suspendisse a pellentesque dui</a></h3>
+							<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.</p>
+						</div>
+						<div class="col-md-6 nam-matis-1">
+							<a href=""><img src="<?=SITE_TEMPLATE_PATH?>/images/6.jpg" class="img-responsive" alt=""></a>
+							<h3><a href="">Suspendisse a pellentesque dui</a></h3>
+							<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.</p>
+						</div>
+							<div class="clearfix"> </div>
+				</div>
+				<div class="nam-matis-top">
+						<div class="col-md-6 nam-matis-1">
+							<a href="single.html"><img src="<?=SITE_TEMPLATE_PATH?>/images/4.jpg" class="img-responsive" alt=""></a>
+							<h3><a href="single.html">Suspendisse a pellentesque dui</a></h3>
+							<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.</p>
+						</div>
+						<div class="col-md-6 nam-matis-1">
+							<a href="single.html"><img src="<?=SITE_TEMPLATE_PATH?>/images/1.jpg" class="img-responsive" alt=""></a>
+							<h3><a href="single.html">Suspendisse a pellentesque dui</a></h3>
+							<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.</p>
+						</div>
+							<div class="clearfix"> </div>
+					</div>	
+		</div>
+		<!-- nam-matis -->	
+	</div>
+	<div class="col-md-3 bann-left">
+		<div class="b-search">
+			<form>
+				<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+				<input type="submit" value="">
+			</form>
+		</div>
+		<h3>Recent Posts</h3>
+		<div class="blo-top">
+			<div class="blog-grids">
+				<div class="blog-grid-left">
+					<a href="single.html"><img src="<?=SITE_TEMPLATE_PATH?>/images/1b.jpg" class="img-responsive" alt=""></a>
+				</div>
+				<div class="blog-grid-right">
+					<h4><a href="single.html">Little Invaders </a></h4>
+					<p>pellentesque dui, non felis. Maecenas male </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="blog-grids">
+				<div class="blog-grid-left">
+					<a href="single.html"><img src="<?=SITE_TEMPLATE_PATH?>/images/2b.jpg" class="img-responsive" alt=""></a>
+				</div>
+				<div class="blog-grid-right">
+					<h4><a href="single.html">Little Invaders </a></h4>
+					<p>pellentesque dui, non felis. Maecenas male </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="blog-grids">
+				<div class="blog-grid-left">
+					<a href=""><img src="<?=SITE_TEMPLATE_PATH?>/images/3b.jpg" class="img-responsive" alt=""></a>
+				</div>
+				<div class="blog-grid-right">
+					<h4><a href="single.html">Little Invaders </a></h4>
+					<p>pellentesque dui, non felis. Maecenas male </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<h3>Categories</h3>
+		<div class="blo-top">
+			<li><a href="#">||   Lorem Ipsum passage</a></li>
+			<li><a href="#">||   Finibus Bonorum et</a></li>
+			<li><a href="#">||   Treatise on the theory</a></li>
+			<li><a href="#">||   Characteristic words</a></li>
+			<li><a href="#">||   combined with a handful</a></li>
+			<li><a href="#">||   which looks reasonable</a></li>
+		</div>
+		<h3>Newsletter</h3>
+		
+		<div class="blo-top">
+			<div class="name">
+				<form>
+					<input type="text" placeholder="email" required="">
+				</form>
+			</div>	
+			<div class="button">
+				<form>
+					<input type="submit" value="Subscribe">
+				</form>
+			</div>
+				<div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="fle-xsel">
+		<ul id="flexiselDemo3">
+			<li>
+				<a href="#">
+					<div class="banner-1">
+						<img src="<?=SITE_TEMPLATE_PATH?>/images/6.jpg" class="img-responsive" alt="">
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="banner-1">
+						<img src="<?=SITE_TEMPLATE_PATH?>/images/5.jpg" class="img-responsive" alt="">
+					</div>
+				</a>
+			</li>			
+			<li>
+				<a href="#">
+					<div class="banner-1">
+						<img src="<?=SITE_TEMPLATE_PATH?>/images/1.jpg" class="img-responsive" alt="">
+					</div>
+				</a>
+			</li>		
+			<li>
+				<a href="#">
+					<div class="banner-1">
+						<img src="<?=SITE_TEMPLATE_PATH?>/images/4.jpg" class="img-responsive" alt="">
+					</div>
+				</a>
+			</li>	
+			<li>
+				<a href="#">
+					<div class="banner-1">
+						<img src="<?=SITE_TEMPLATE_PATH?>/images/6.jpg" class="img-responsive" alt="">
+					</div>
+				</a>
+			</li>	
+			<li>
+				<a href="#">
+					<div class="banner-1">
+						<img src="<?=SITE_TEMPLATE_PATH?>/images/1.jpg" class="img-responsive" alt="">
+					</div>
+				</a>
+			</li>				
+		</ul>
+						
+        <div class="clearfix"> </div>
+	</div>
+</main>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
