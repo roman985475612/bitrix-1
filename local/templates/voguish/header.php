@@ -25,23 +25,27 @@
     <!-- header -->
 	<div class="header">
 		<div class="container">
-			<div class="logo">
-				<a href="index.html"><img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" class="img-responsive" alt=""></a>
-			</div>
-            <div class="head-nav">
-                <span class="menu"> </span>
-                <ul class="cl-effect-1">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="404.html">Shortcodes</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <div class="clearfix"></div>
-                </ul>
+            <div class="logo">
+                <a href="/">
+                    <?$APPLICATION->IncludeComponent("bitrix:main.include","",[
+                        "AREA_FILE_SHOW" => "file",
+                        "PATH"           => "/include/logo.php",
+                    ]);?>
+                </a>
             </div>
-            <div class="clearfix"> </div>
+            <?$APPLICATION->IncludeComponent("bitrix:menu","top_menu", [
+                    "ROOT_MENU_TYPE"        => "top", 
+                    "MAX_LEVEL"             => "1", 
+                    "CHILD_MENU_TYPE"       => "top", 
+                    "USE_EXT"               => "Y",
+                    "DELAY"                 => "N",
+                    "ALLOW_MULTI_SELECT"    => "Y",
+                    "MENU_CACHE_TYPE"       => "N", 
+                    "MENU_CACHE_TIME"       => "3600", 
+                    "MENU_CACHE_USE_GROUPS" => "Y", 
+                    "MENU_CACHE_GET_VARS"   => "" 
+            ]);?>
+            <div class="clearfix"></div>
 		</div>
 	</div>
     <!-- header -->

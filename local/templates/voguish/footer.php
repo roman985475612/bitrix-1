@@ -36,7 +36,10 @@
 		
 		<div class="clearfix"> </div>
 		<div class="copyright">
-			<p>Copyrights © 2015 Voguish All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts</a></p>
+            <?$APPLICATION->IncludeComponent("bitrix:main.include","",[
+                "AREA_FILE_SHOW" => "file",
+                "PATH"           => "/include/copy.php",
+            ]);?>
 		</div>
 	</div>
 </div>
