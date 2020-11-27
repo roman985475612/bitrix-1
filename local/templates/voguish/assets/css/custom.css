@@ -1,0 +1,9 @@
+.pagination > li.active > a {
+    background-color: #f53f1a;
+    border-color: #f53f1a;
+}
+
+.pagination > li.active > a:hover {
+    background-color: #f53f1a;
+    border-color: #f53f1a;
+}

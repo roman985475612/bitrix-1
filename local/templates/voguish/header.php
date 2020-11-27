@@ -8,6 +8,7 @@
         
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/assets/css/bootstrap.css");
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/assets/css/style.css");
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/assets/css/custom.css");
         Asset::getInstance()->addString('<meta name="viewport" content="width=device-width, initial-scale=1">');
         Asset::getInstance()->addString("<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>");
         Asset::getInstance()->addString("<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>");
