@@ -3,13 +3,14 @@
     <div class="blog">
 		<div class="blog-content">
             <div class="blog-content-left">
-                <?php $APPLICATION->IncludeComponent('bitrix:news', '.default', [
+                <?php $APPLICATION->IncludeComponent('bitrix:news', '', [
                     'IBLOCK_TYPE'          => 'content',
                     'IBLOCK_ID'            => 'blog',
                     'SEF_MODE'             => 'Y',
                     'SEF_FOLDER'           => '/blog/',
                     'SEF_URL_TEMPLATES'    => [
-                        'detail' => '#ELEMENT_CODE#/',
+                        'section' => '#SECTION_CODE_PATH#/',
+                        'detail'  => '#SECTION_CODE_PATH#/#ELEMENT_CODE#',
                     ],
                     'LIST_PROPERTY_CODE'   => ['AUTHOR'],
                     'NEWS_COUNT'           => 2,

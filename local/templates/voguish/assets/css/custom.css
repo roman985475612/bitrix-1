@@ -7,3 +7,19 @@
     background-color: #f53f1a;
     border-color: #f53f1a;
 }
+
+.blog-articals h1, h2 {
+    color: #f53f1a;
+    font-weight: 700;
+    margin-bottom: 1em;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.blog-articals h1 {
+    font-size: 1.7em;
+    margin-top: .7em;
+}
+
+.blog-articals h2 {
+    font-size: 1.5em;
+}
