@@ -24,6 +24,7 @@
         </ul>
     </div>
     <div class="respon">
+
         <h2>Responses so far</h2>
         <div class="strator">
             <h5>ADMINISTRATOR</h5>

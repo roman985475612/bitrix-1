@@ -167,3 +167,32 @@ $this->setFrameMode(true);
 	$component
 );?>
 <?endif?>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:catalog.comments", 
+	".default", 
+	array(
+		"CACHE_TIME" => "0",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"COMMENTS_COUNT" => "5",
+		"ELEMENT_CODE" => "",
+		"ELEMENT_ID" => $arResult["ID"],
+		"IBLOCK_ID" => "1",
+		"IBLOCK_TYPE" => "content",
+		"SHOW_DEACTIVATED" => "N",
+		"TEMPLATE_THEME" => "blue",
+		"URL_TO_COMMENT" => "",
+		"BLOG_USE" => "Y",
+		"COMPONENT_TEMPLATE" => ".default",
+		"WIDTH" => "",
+		"FB_USE" => "Y",
+		"FB_TITLE" => "Facebook",
+		"FB_USER_ADMIN_ID" => "",
+		"FB_APP_ID" => "",
+		"FB_COLORSCHEME" => "light",
+		"FB_ORDER_BY" => "social",
+		"VK_USE" => "N"
+	),
+	false
+);?>
+<?php debug($arResult["VARIABLES"]['ELEMENT_CODE']) ?>

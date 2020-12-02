@@ -4,76 +4,34 @@ $APPLICATION->SetTitle("Voguish a Blogging Category Flat Bootstarp Responsive We
 ?>
 <main class="container">
 	<div class="col-md-9 bann-right">
-		<!-- banner -->
-		<div class="banner">		
-			<div class="header-slider">
-				<div class="slider">
-					<div class="callbacks_container">
-					  	<ul class="rslides" id="slider">
-							<li>
-								<img src="<?=SITE_TEMPLATE_PATH?>/images/1.jpg" class="img-responsive" alt="">
-								<div class="caption">
-									<h3>Maecenas malesuada elit lectus felis</h3>
-									<p>Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus.</p>
-								</div>
-							</li>
-							<li>
-								<img src="<?=SITE_TEMPLATE_PATH?>/images/4.jpg" class="img-responsive" alt="">
-								<div class="caption">
-									<h3>Curabitur et ligula. Ut molestie </h3>
-									<p>Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulu. </p>
-								</div>
-							</li>
-							<li>
-								<img src="<?=SITE_TEMPLATE_PATH?>/images/5.jpg" class="img-responsive" alt="">
-								<div class="caption">
-									<h3>Etiam ullamcorper. Suspendisse</h3>
-									<p>Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. </p>
-								</div>
-							</li>
-							<li>
-								<img src="<?=SITE_TEMPLATE_PATH?>/images/6.jpg" class="img-responsive" alt="">
-								<div class="caption">
-									<h3>Suspendisse a pellentesque dui</h3>
-									<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada .</p>
-								</div>
-							</li>	
-						</ul>
-			  		</div>
-				 </div>
-			</div>
-		</div>
-		<!-- banner -->	
-		<!-- nam-matis -->
-		<div class="nam-matis">
-			<div class="nam-matis-top">
-						<div class="col-md-6 nam-matis-1">
-							<a href="single.html"><img src="<?=SITE_TEMPLATE_PATH?>/images/5.jpg" class="img-responsive" alt=""></a>
-							<h3><a href="single.html">Suspendisse a pellentesque dui</a></h3>
-							<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.</p>
-						</div>
-						<div class="col-md-6 nam-matis-1">
-							<a href=""><img src="<?=SITE_TEMPLATE_PATH?>/images/6.jpg" class="img-responsive" alt=""></a>
-							<h3><a href="">Suspendisse a pellentesque dui</a></h3>
-							<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.</p>
-						</div>
-							<div class="clearfix"> </div>
-				</div>
-				<div class="nam-matis-top">
-						<div class="col-md-6 nam-matis-1">
-							<a href="single.html"><img src="<?=SITE_TEMPLATE_PATH?>/images/4.jpg" class="img-responsive" alt=""></a>
-							<h3><a href="single.html">Suspendisse a pellentesque dui</a></h3>
-							<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.</p>
-						</div>
-						<div class="col-md-6 nam-matis-1">
-							<a href="single.html"><img src="<?=SITE_TEMPLATE_PATH?>/images/1.jpg" class="img-responsive" alt=""></a>
-							<h3><a href="single.html">Suspendisse a pellentesque dui</a></h3>
-							<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.</p>
-						</div>
-							<div class="clearfix"> </div>
-					</div>	
-		</div>
-		<!-- nam-matis -->	
+		<?php
+			$APPLICATION->IncludeComponent('bitrix:news.list', 'banner', [
+				'IBLOCK_TYPE'       => 'content',
+				'IBLOCK_ID'         => 'blog',
+				'NEWS_COUNT'        => '4',
+				'SORT_BY1'          => 'TIMESTAMP_X',
+				'SORT_ORDER1'       => 'DESC',
+				'SEF_MODE'          => 'Y',
+				'SEF_FOLDER'        => '/blog/',
+				'SEF_URL_TEMPLATES' => [
+					'section' => '#SECTION_CODE_PATH#/',
+					'detail'  => '#SECTION_CODE_PATH#/#ELEMENT_CODE#',
+				],
+			]);
+			$APPLICATION->IncludeComponent('bitrix:news.list', 'nam_matis', [
+				'IBLOCK_TYPE'       => 'content',
+				'IBLOCK_ID'         => 'blog',
+				'NEWS_COUNT'        => '4',
+				'SORT_BY1'          => 'TIMESTAMP_X',
+				'SORT_ORDER1'       => 'DESC',
+				'SEF_MODE'          => 'Y',
+				'SEF_FOLDER'        => '/blog/',
+				'SEF_URL_TEMPLATES' => [
+					'section' => '#SECTION_CODE_PATH#/',
+					'detail'  => '#SECTION_CODE_PATH#/#ELEMENT_CODE#',
+				],
+			]);
+		?>
 	</div>
 	<div class="col-md-3 bann-left">
         <?php
@@ -81,63 +39,41 @@ $APPLICATION->SetTitle("Voguish a Blogging Category Flat Bootstarp Responsive We
                 "AREA_FILE_SHOW" => "file",
                 "PATH"           => "/include/search_widget.php",
             ]);
-            $APPLICATION->IncludeComponent("bitrix:main.include","",[
-                "AREA_FILE_SHOW" => "file",
-                "PATH"           => "/include/recent_posts_widget.php",
-            ]);
-            $APPLICATION->IncludeComponent("bitrix:main.include","",[
+			$APPLICATION->IncludeComponent('bitrix:news.list', 'recent_posts', [
+				'IBLOCK_TYPE'       => 'content',
+				'IBLOCK_ID'         => 'blog',
+				'NEWS_COUNT'        => '3',
+				'SORT_BY1'          => 'TIMESTAMP_X',
+				'SORT_ORDER1'       => 'DESC',
+				'PROPERTY_CODE'     => ['DESCRIPTION'],
+				'SEF_MODE'          => 'Y',
+				'SEF_FOLDER'        => '/blog/',
+				'SEF_URL_TEMPLATES' => [
+					'section' => '#SECTION_CODE_PATH#/',
+					'detail'  => '#SECTION_CODE_PATH#/#ELEMENT_CODE#',
+				],
+			]);
+			$APPLICATION->IncludeComponent("bitrix:main.include","",[
                 "AREA_FILE_SHOW" => "file",
                 "PATH"           => "/include/newsletter_widget.php",
             ]);
         ?>
 	</div>
 	<div class="clearfix"></div>
-	<div class="fle-xsel">
-		<ul id="flexiselDemo3">
-			<li>
-				<a href="#">
-					<div class="banner-1">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/6.jpg" class="img-responsive" alt="">
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<div class="banner-1">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/5.jpg" class="img-responsive" alt="">
-					</div>
-				</a>
-			</li>			
-			<li>
-				<a href="#">
-					<div class="banner-1">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/1.jpg" class="img-responsive" alt="">
-					</div>
-				</a>
-			</li>		
-			<li>
-				<a href="#">
-					<div class="banner-1">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/4.jpg" class="img-responsive" alt="">
-					</div>
-				</a>
-			</li>	
-			<li>
-				<a href="#">
-					<div class="banner-1">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/6.jpg" class="img-responsive" alt="">
-					</div>
-				</a>
-			</li>	
-			<li>
-				<a href="#">
-					<div class="banner-1">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/1.jpg" class="img-responsive" alt="">
-					</div>
-				</a>
-			</li>				
-		</ul>
-        <div class="clearfix"></div>
-	</div>
+	<?php
+		$APPLICATION->IncludeComponent('bitrix:news.list', 'fle_xsel', [
+			'IBLOCK_TYPE'       => 'content',
+			'IBLOCK_ID'         => 'blog',
+			'NEWS_COUNT'        => '10',
+			'SORT_BY1'          => 'TIMESTAMP_X',
+			'SORT_ORDER1'       => 'DESC',
+			'SEF_MODE'          => 'Y',
+			'SEF_FOLDER'        => '/blog/',
+			'SEF_URL_TEMPLATES' => [
+				'section' => '#SECTION_CODE_PATH#/',
+				'detail'  => '#SECTION_CODE_PATH#/#ELEMENT_CODE#',
+			],
+		]);
+	?>
 </main>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
