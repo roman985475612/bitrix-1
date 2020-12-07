@@ -1,38 +1,17 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Voguish a Blogging Category Flat Bootstarp Responsive Website Template | Home :: w3layouts");
+$APPLICATION->SetTitle("Результаты поиска | Voguish");
 ?>
 <main class="container">
 	<div class="col-md-9 bann-right">
-		<?php
-			$APPLICATION->IncludeComponent('bitrix:news.list', 'banner', [
-				'IBLOCK_TYPE'       => 'content',
-				'IBLOCK_ID'         => 'blog',
-				'NEWS_COUNT'        => '4',
-				'SORT_BY1'          => 'TIMESTAMP_X',
-				'SORT_ORDER1'       => 'DESC',
-				'SEF_MODE'          => 'Y',
-				'SEF_FOLDER'        => '/blog/',
-				'SEF_URL_TEMPLATES' => [
-					'section' => '#SECTION_CODE_PATH#/',
-					'detail'  => '#SECTION_CODE_PATH#/#ELEMENT_CODE#',
-				],
-			]);
-			$APPLICATION->IncludeComponent('bitrix:news.list', 'nam_matis', [
-				'IBLOCK_TYPE'       => 'content',
-				'IBLOCK_ID'         => 'blog',
-				'NEWS_COUNT'        => '4',
-				'SORT_BY1'          => 'TIMESTAMP_X',
-				'SORT_ORDER1'       => 'DESC',
-				'SEF_MODE'          => 'Y',
-				'SEF_FOLDER'        => '/blog/',
-				'SEF_URL_TEMPLATES' => [
-					'section' => '#SECTION_CODE_PATH#/',
-					'detail'  => '#SECTION_CODE_PATH#/#ELEMENT_CODE#',
-				],
-			]);
-		?>
-	</div>
+        <?php
+            $APPLICATION->IncludeComponent("bitrix:search.page", 'clear', [
+                'USE_LANGUAGE_GUESS' => 'Y',
+                'PAGE_RESULT_COUNT'  => 2,
+                'DISPLAY_TOP_PAGER'  => 'N',
+            ]);
+        ?>
+    </div>
 	<div class="col-md-3 bann-left">
         <?php
 			$APPLICATION->IncludeComponent("bitrix:search.form", '.default', [

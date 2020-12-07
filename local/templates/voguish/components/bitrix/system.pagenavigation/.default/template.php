@@ -22,18 +22,15 @@
 <nav>
   <ul class="pagination">
 
-    <?php if ($arResult['NavPageNomer'] == 1): ?>
-        <li class="active"><a>1</a></li>
-    <?php else: ?>
+    <?php if ($arResult['NavPageNomer'] > 1): ?>
         <li>
           <a href="<?= $prevQueryString ?>" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>
-        <li><a href="<?= $arResult['sUrlPath'] ?>">1</a></li>
     <?php endif ?>
     
-    <?php for ($i = 2; $i <= $arResult['NavPageCount']; $i++): ?>
+    <?php for ($i = 1; $i <= $arResult['NavPageCount']; $i++): ?>
         <?php if ($arResult['NavPageNomer'] == $i): ?>
             <li class="active">
                 <a><?= $i ?></a>

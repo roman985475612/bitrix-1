@@ -5,7 +5,7 @@
             <div class="blog-content-left">
                 <?php $APPLICATION->IncludeComponent('bitrix:news', '', [
                     'IBLOCK_TYPE'          => 'content',
-                    'IBLOCK_ID'            => 'blog',
+                    'IBLOCK_ID'            => '1',
                     'SEF_MODE'             => 'Y',
                     'SEF_FOLDER'           => '/blog/',
                     'SEF_URL_TEMPLATES'    => [
@@ -18,9 +18,9 @@
             </div>
             <div class="blog-content-right">
                 <?php
-                    $APPLICATION->IncludeComponent("bitrix:main.include","",[
-                        "AREA_FILE_SHOW" => "file",
-                        "PATH"           => "/include/search_widget.php",
+                    $APPLICATION->IncludeComponent("bitrix:search.form", '.default', [
+                        'USE_SUGGEST' => 'Y',
+                        'PAGE'		  => '#SITE_DIR#search/index.php',
                     ]);
                     $APPLICATION->IncludeComponent("bitrix:main.include","",[
                         "AREA_FILE_SHOW" => "file",
