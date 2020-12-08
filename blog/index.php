@@ -26,9 +26,8 @@
                         "AREA_FILE_SHOW" => "file",
                         "PATH"           => "/include/twitter_widget.php",
                     ]);
-                    $APPLICATION->IncludeComponent("bitrix:main.include","",[
-                        "AREA_FILE_SHOW" => "file",
-                        "PATH"           => "/include/tags_widget.php",
+                    $APPLICATION->IncludeComponent("bitrix:search.tags.cloud", "", [
+                        'URL_SEARCH' => '/search/index.php',
                     ]);
                 ?>
             </div>
