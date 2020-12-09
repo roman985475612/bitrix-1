@@ -12,7 +12,8 @@
                         'section' => '#SECTION_CODE_PATH#/',
                         'detail'  => '#SECTION_CODE_PATH#/#ELEMENT_CODE#',
                     ],
-                    'LIST_PROPERTY_CODE'   => ['AUTHOR'],
+                    'LIST_PROPERTY_CODE'   => ['AUTHOR', 'GALLERY'],
+                    'DETAIL_PROPERTY_CODE' => ['AUTHOR', 'GALLERY'],
                     'NEWS_COUNT'           => 2,
                 ]); ?>
             </div>

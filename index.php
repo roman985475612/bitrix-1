@@ -2,6 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Voguish a Blogging Category Flat Bootstarp Responsive Website Template | Home :: w3layouts");
 ?>
+
 <main class="container">
 	<div class="col-md-9 bann-right">
 		<?php
@@ -95,4 +96,5 @@ $APPLICATION->SetTitle("Voguish a Blogging Category Flat Bootstarp Responsive We
 		]);
 	?>
 </main>
+
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

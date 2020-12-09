@@ -21,6 +21,22 @@ $(function () {
         });
     });
 
+    $(".fancybox").fancybox({
+		prevEffect	: 'none',
+        nextEffect	: 'none',
+        closeBtn    : false,
+		helpers	: {
+			title	: {
+				type: 'inside'
+			},
+			thumbs	: {
+				width	: 50,
+				height	: 50
+            },
+            buttons : {}
+		}
+	})
+
 });
 
 $(window).load(function() {

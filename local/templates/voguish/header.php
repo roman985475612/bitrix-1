@@ -6,16 +6,19 @@
     <?php
         use Bitrix\Main\Page\Asset;
         
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/assets/css/bootstrap.css");
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/assets/css/style.css");
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/assets/css/custom.css");
         Asset::getInstance()->addString('<meta name="viewport" content="width=device-width, initial-scale=1">');
         Asset::getInstance()->addString("<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>");
         Asset::getInstance()->addString("<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>");
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/assets/css/bootstrap.css");
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/assets/css/style.css");
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/assets/plugins/fancybox/source/jquery.fancybox.css?v=2.1.7");
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/assets/css/custom.css");
         
         CJSCore::Init(['jquery']);
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/assets/js/jquery.flexisel.js");
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/assets/js/responsiveslides.min.js");
+        // Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/assets/js/bootstrap.min.js");
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/assets/plugins/fancybox/source/jquery.fancybox.pack.js?v=2.1.7");
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/assets/js/script.js");
         
         $APPLICATION->ShowHead();

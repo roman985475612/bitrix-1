@@ -1,4 +1,5 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?php //debug($arResult['PROPERTIES']['GALLERY']) ?>
+<?php if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <div class="blog-articals">
     <div class="blog-artical-info-img">
         <img 
@@ -14,6 +15,19 @@
     <div class="blog-artical-info-text">
         <p><?= $arResult['DETAIL_TEXT'] ?></p>
     </div>
+
+    <?php if (!empty($arResult['PROPERTIES']['GALLERY']['VALUE'])): ?>
+        <?php foreach ($arResult['PROPERTIES']['GALLERY']['VALUE'] as $value): ?>
+            <?php $photo = CFile::GetFileArray($value) ?>
+            <a 
+                class="fancybox"
+                rel="fancybox"
+                title="<?= $photo['DESCRIPTION'] ?>" 
+                href="<?= $photo['SRC'] ?>"
+            ><img src="<?= $photo['SRC'] ?>" width="200px" class="img-thumbnail"></a>
+        <?php endforeach ?>
+    <?php endif ?>
+
     <div class="artical-links">
         <ul>
             <li><small></small><span><?= $arResult['TIMESTAMP_X'] ?></span></li>
