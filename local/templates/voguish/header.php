@@ -28,28 +28,32 @@
     <div id="panel"><?php $APPLICATION->ShowPanel() ?></div>
     <!-- header -->
 	<div class="header">
-		<div class="container">
-            <div class="logo">
-                <a href="/">
-                    <?$APPLICATION->IncludeComponent("bitrix:main.include","",[
-                        "AREA_FILE_SHOW" => "file",
-                        "PATH"           => "/include/logo.php",
-                    ]);?>
-                </a>
+            <div class="container">
+                <div class="logo">
+                    <a href="/">
+                        <?php
+                            $APPLICATION->IncludeComponent("bitrix:main.include","",[
+                                "AREA_FILE_SHOW" => "file",
+                                "PATH"           => "/include/logo.php",
+                            ]);
+                        ?>
+                    </a>
+                </div>
+                <?php
+                    $APPLICATION->IncludeComponent("bitrix:menu","top_menu", [
+                        "ROOT_MENU_TYPE"        => "top", 
+                        "MAX_LEVEL"             => "1", 
+                        "CHILD_MENU_TYPE"       => "top", 
+                        "USE_EXT"               => "Y",
+                        "DELAY"                 => "N",
+                        "ALLOW_MULTI_SELECT"    => "Y",
+                        "MENU_CACHE_TYPE"       => "N", 
+                        "MENU_CACHE_TIME"       => "3600", 
+                        "MENU_CACHE_USE_GROUPS" => "Y", 
+                        "MENU_CACHE_GET_VARS"   => "" 
+                    ]);
+                ?>
+                <div class="clearfix"></div>
             </div>
-            <?$APPLICATION->IncludeComponent("bitrix:menu","top_menu", [
-                    "ROOT_MENU_TYPE"        => "top", 
-                    "MAX_LEVEL"             => "1", 
-                    "CHILD_MENU_TYPE"       => "top", 
-                    "USE_EXT"               => "Y",
-                    "DELAY"                 => "N",
-                    "ALLOW_MULTI_SELECT"    => "Y",
-                    "MENU_CACHE_TYPE"       => "N", 
-                    "MENU_CACHE_TIME"       => "3600", 
-                    "MENU_CACHE_USE_GROUPS" => "Y", 
-                    "MENU_CACHE_GET_VARS"   => "" 
-            ]);?>
-            <div class="clearfix"></div>
-		</div>
 	</div>
     <!-- header -->

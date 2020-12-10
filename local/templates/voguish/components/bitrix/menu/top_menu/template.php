@@ -9,6 +9,36 @@
                 <a href="<?= $item['LINK']?>"><?= $item['TEXT'] ?></a>
             </li>
         <?php endforeach ?>
+        <?php if ($USER->IsAuthorized()): ?>
+            <li>
+                <a
+                    href="<?= $APPLICATION->GetCurPageParam(
+                                                "logout=yes", 
+                                                [
+                                                    "login",
+                                                    "logout",
+                                                    "register",
+                                                    "forgot_password",
+                                                    "change_password"
+                                                ]);?>"
+                >Выход</a>
+            </li>
+        <?php else: ?>
+            <li><a href="/auth/">Вход</a></li>
+            <li>
+                <a
+                    href="<?= $APPLICATION->GetCurPageParam(
+                                                "register=yes", 
+                                                [
+                                                    "login",
+                                                    "logout",
+                                                    "register",
+                                                    "forgot_password",
+                                                    "change_password"
+                                                ]);?>"
+                >Регистрация</a>
+            </li>
+        <?php endif ?>
         <div class="clearfix"></div>
     </ul>
 </div>

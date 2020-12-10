@@ -36,33 +36,33 @@ $APPLICATION->SetTitle("Voguish a Blogging Category Flat Bootstarp Responsive We
 	</div>
 	<div class="col-md-3 bann-left">
         <?php
-			$APPLICATION->IncludeComponent("bitrix:search.form", '.default', [
-				'USE_SUGGEST' => 'Y',
-				'PAGE'		  => '#SITE_DIR#search/index.php',
-			]);
-			$APPLICATION->IncludeComponent("bitrix:main.include", "", [
+            $APPLICATION->IncludeComponent("bitrix:search.form", '.default', [
+                    'USE_SUGGEST' => 'Y',
+                    'PAGE'		  => '#SITE_DIR#search/index.php',
+            ]);
+            $APPLICATION->IncludeComponent("bitrix:main.include", "", [
                 "AREA_FILE_SHOW" => "file",
                 "PATH"           => "/include/newsletter_widget.php",
             ]);
-			$APPLICATION->IncludeComponent("bitrix:catalog.section.list", ".default", [
-					"IBLOCK_TYPE" 			=> "content",
-					"IBLOCK_ID" 			=> "1",
-					"SECTION_ID" 			=> $_REQUEST["SECTION_CODE_PATH"],
-					"COMPONENT_TEMPLATE" 	=> "",
-					"SECTION_CODE" 			=> "",
-					"COUNT_ELEMENTS" 		=> "Y",
-					"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
-					"TOP_DEPTH" 			=> "2",
-					"FILTER_NAME" 			=> "sectionsFilter",
-					"VIEW_MODE" 			=> "LINE",
-					"SHOW_PARENT_NAME" 		=> "Y",
-					"SECTION_URL" 			=> "",
-					"CACHE_TYPE" 			=> "A",
-					"CACHE_TIME" 			=> "36000000",
-					"CACHE_GROUPS" 			=> "Y",
-					"CACHE_FILTER" 			=> "N",
-					"ADD_SECTIONS_CHAIN"	=> "Y"
-			]);
+            $APPLICATION->IncludeComponent("bitrix:catalog.section.list", ".default", [
+                "IBLOCK_TYPE" 		=> "content",
+                "IBLOCK_ID" 		=> "1",
+                "SECTION_ID" 		=> $_REQUEST["SECTION_CODE_PATH"],
+                "COMPONENT_TEMPLATE"    => "",
+                "SECTION_CODE" 		=> "",
+                "COUNT_ELEMENTS" 	=> "Y",
+                "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+                "TOP_DEPTH" 		=> "2",
+                "FILTER_NAME" 		=> "sectionsFilter",
+                "VIEW_MODE" 		=> "LINE",
+                "SHOW_PARENT_NAME" 	=> "Y",
+                "SECTION_URL" 		=> "",
+                "CACHE_TYPE" 		=> "A",
+                "CACHE_TIME" 		=> "36000000",
+                "CACHE_GROUPS" 		=> "Y",
+                "CACHE_FILTER" 		=> "N",
+                "ADD_SECTIONS_CHAIN"	=> "Y"
+            ]);
 			$APPLICATION->IncludeComponent('bitrix:news.list', 'recent_posts', [
 				'IBLOCK_TYPE'       => 'content',
 				'IBLOCK_ID'         => 'blog',

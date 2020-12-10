@@ -23,3 +23,24 @@
 .blog-articals h2 {
     font-size: 1.5em;
 }
+
+.custom-btn {
+    background: #26313b;
+    color: #FFF;
+    font-size: 1em;
+    padding: 0.6em 1.2em;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    display: inline-block;
+    text-transform: uppercase;
+    border: none;
+    outline: none;    
+}
+
+.custom-btn:hover {
+    background: #f53f1a;
+    text-decoration: none;
+    color: #fff;
+}
