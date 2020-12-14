@@ -24,6 +24,27 @@
     font-size: 1.5em;
 }
 
+.custom-form-group {
+    width: 48%;
+    margin: 20px 0;
+}
+
+.custom-form-group label {
+    color: #999;
+    font-size: 0.85em;
+    padding-bottom: 0.2em;
+    display: block;
+    text-transform: uppercase;
+}
+
+.custom-form-control {
+    border: 1px solid #26313b;
+    outline-color: #26313b;
+    width: 96%;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
 .custom-btn {
     background: #26313b;
     color: #FFF;

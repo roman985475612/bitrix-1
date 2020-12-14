@@ -9,11 +9,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
                 <p><?= GetMessage('AUTH_FIRST_ONE') ?></p>
                 <a 
                     class="acount-btn" 
-                    href="<?= $APPLICATION->GetCurPageParam("register=yes", array(
-                                                    "login",
-                                                    "logout",
-                                                    "forgot_password",
-                                                    "change_password"));?>"><?= GetMessage('AUTH_REGISTER') ?></a>
+                    href="<?= $arResult['AUTH_REGISTER_URL'] ?>"><?= GetMessage('AUTH_REGISTER') ?></a>
             </div>
             <div class="col-md-6 login-right wow fadeInRight" data-wow-delay="0.4s">
                 <h3><?= GetMessage('AUTH_TITLE') ?></h3>

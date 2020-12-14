@@ -24,19 +24,11 @@
                 >Выход</a>
             </li>
         <?php else: ?>
-            <li><a href="/auth/">Вход</a></li>
-            <li>
-                <a
-                    href="<?= $APPLICATION->GetCurPageParam(
-                                                "register=yes", 
-                                                [
-                                                    "login",
-                                                    "logout",
-                                                    "register",
-                                                    "forgot_password",
-                                                    "change_password"
-                                                ]);?>"
-                >Регистрация</a>
+            <li <?php if($APPLICATION->GetCurPage() == '/auth/') echo 'class="active"' ?>>
+                <a href="/auth/">Вход</a>
+            </li>
+            <li <?php if($APPLICATION->GetCurPage() == '/auth/register.php') echo 'class="active"' ?>>
+                <a href="/auth/register.php">Регистрация</a>
             </li>
         <?php endif ?>
         <div class="clearfix"></div>

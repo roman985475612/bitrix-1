@@ -1,4 +1,3 @@
-<?php //debug($arResult['PROPERTIES']['GALLERY']) ?>
 <?php if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <div class="blog-articals">
     <div class="blog-artical-info-img">
@@ -10,7 +9,7 @@
     </div>
     <div class="blog-artical-info-head">
         <h1><?= $arResult['NAME'] ?></h1>
-        <h6>Posted on, <?= $arResult['TIMESTAMP_X'] ?> by <a href="#"><?= $arResult['PROPERTIES']['AUTHOR']['VALUE'] ?></a></h6>
+        <h6>Posted on, <?= $arResult['TIMESTAMP_X'] ?> by <a href="#"><?= $arResult['AUTHOR'] ?></a></h6>
     </div>
     <div class="blog-artical-info-text">
         <p><?= $arResult['DETAIL_TEXT'] ?></p>
@@ -31,7 +30,7 @@
     <div class="artical-links">
         <ul>
             <li><small></small><span><?= $arResult['TIMESTAMP_X'] ?></span></li>
-            <li><a href="#"><small class="admin"> </small><span><?= $arResult['PROPERTIES']['AUTHOR']['VALUE'] ?></span></a></li>
+            <li><a href="#"><small class="admin"> </small><span><?= $arResult['AUTHOR'] ?></span></a></li>
             <li><a href="#"><small class="no"> </small><span>No comments</span></a></li>
             <li><a href="#"><small class="posts"> </small><span>View posts <?= $arResult['SHOW_COUNTER'] ?></span></a></li>
             <li><a href="#"><small class="link"> </small><span>permalink</span></a></li>

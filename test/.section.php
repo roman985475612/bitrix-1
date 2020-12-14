@@ -1,6 +1,4 @@
 <?
 $sSectionName = "Тестовый";
-$arDirProperties = Array(
-
-);
+$arDirProperties = [];
 ?>
