@@ -37,6 +37,12 @@
     text-transform: uppercase;
 }
 
+.custom-form-group .form-text {
+    margin-top: .25rem;
+    font-size: .875em;
+    color: #6c757d;
+}
+
 .custom-form-control {
     border: 1px solid #26313b;
     outline-color: #26313b;

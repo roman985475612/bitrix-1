@@ -34,8 +34,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
                         <span><?=GetMessage("AUTH_PASSWORD")?><label>*</label></span>
                         <input type="password" name="USER_PASSWORD"> 
                     </div>
-                    <a class="forgot" href="<?=$arResult["AUTH_FORGOT_PASSWORD_URL"]?>"><?= GetMessage('AUTH_FORGOT_PASSWORD_2') ?></a>
                     <input type="submit" value="<?=GetMessage('AUTH_AUTHORIZE')?>">
+                    <!--a class="forgot" href="<?=$arResult["AUTH_FORGOT_PASSWORD_URL"]?>"><?= GetMessage('AUTH_FORGOT_PASSWORD_2') ?></a-->
+                    <a class="forgot" href="/auth/getpass.php"><?= GetMessage('AUTH_FORGOT_PASSWORD_2') ?></a>
                 </form>
             </div>	
             <div class="clearfix"> </div>

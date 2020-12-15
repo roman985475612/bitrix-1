@@ -1,4 +1,4 @@
-<h3>Recent Posts</h3>
+<h3><?= GetMessage('RECENT_POSTS') ?></h3>
 <div class="blo-top">
     <?php foreach ($arResult['ITEMS'] as $item): ?>
         <div class="blog-grids">
