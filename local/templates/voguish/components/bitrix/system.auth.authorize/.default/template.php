@@ -14,7 +14,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
             <div class="col-md-6 login-right wow fadeInRight" data-wow-delay="0.4s">
                 <h3><?= GetMessage('AUTH_TITLE') ?></h3>
                 <p><?= GetMessage('AUTH_PLEASE_AUTH') ?></p>
-        	<form name="form_auth" method="post" target="_top" action="<?=$arResult["AUTH_URL"]?>">
+                <form name="form_auth" method="post" target="_top" action="<?=$arResult["AUTH_URL"]?>">
                     <input type="hidden" name="AUTH_FORM" value="Y" />
                     <input type="hidden" name="TYPE" value="AUTH" />
                     

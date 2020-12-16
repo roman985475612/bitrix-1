@@ -1,18 +1,16 @@
 <?php 
-    // define('NEED_AUTH', true);
+    define('NEED_AUTH', true);
     require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php"); 
-    $APPLICATION->SetTitle('Восстановление пароля');
+    $APPLICATION->SetTitle('Профиль пользователя');
 ?>
 
 <main class="container">
     <div class="login-page">
         <?php
             $APPLICATION->IncludeComponent(
-                'bitrix:system.auth.forgotpasswd',
+                'bitrix:main.profile',
                 '',
-                [
-                    'SHOW_ERRORS' => 'Y',
-                ]
+                []
             );
         ?>
     </div>
